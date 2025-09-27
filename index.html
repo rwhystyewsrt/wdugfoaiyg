@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>群聊介绍</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://bing.img.run/1920x1080.php') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            color: #fff;
+        }
+
+        .group-info {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.3s ease;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 120px;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .social-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .qq-icon {
+            color: #12b7f5;
+        }
+
+        .bilibili-icon {
+            color: #fb7299;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+        }
+
+        .compatibility-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .compatibility-mode-toggle label {
+            color: #333;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        #compatibilityModeCheckbox {
+            width: auto;
+            margin: 0;
+        }
+
+        [data-compatibility-mode="true"] body {
+            background-image: none;
+            background-color: #f0f0f0;
+        }
+
+        [data-compatibility-mode="true"] .container {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            background: rgba(255,255,255,0.95);
+            border: 1px solid #ddd;
+        }
+
+        [data-compatibility-mode="true"] h1 {
+            color: #333;
+            text-shadow: none;
+        }
+
+        [data-compatibility-mode="true"] .group-info {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            color: #333;
+        }
+
+        [data-compatibility-mode="true"] .social-link {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            color: #333;
+        }
+
+        [data-compatibility-mode="true"] .footer {
+            color: #666;
+            border-color: #eee;
+        }
+
+        @media (max-width: 600px) {
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-link {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎加入我们的群聊</h1>
+        
+        <div class="group-info">
+            <h2>群聊介绍</h2>
+            <p>这里是一个充满活力和友好的交流社区，我们分享技术、生活、游戏等各种有趣的话题。无论你是技术大佬还是小白，都欢迎加入我们的大家庭！</p>
+            <p>群内定期举办各种活动，分享最新技术动态，解决各种疑难问题。期待你的加入！</p>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://qm.qq.com/cgi-bin/qm/qr?k=xxxxxxxxxx" target="_blank" class="social-link">
+                <i class="fab fa-qq social-icon qq-icon"></i>
+                <span>加入群聊</span>
+            </a>
+            
+            <a href="tencent://message/?uin=3295054381" class="social-link">
+                <i class="fab fa-qq social-icon qq-icon"></i>
+                <span>联系群主</span>
+            </a>
+            
+            <a href="https://space.bilibili.com/xxxxxxxx" target="_blank" class="social-link">
+                <i class="fab fa-bilibili social-icon bilibili-icon"></i>
+                <span>B站主页</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>落眸璨金 喵~(qq3295054381)制作</p>
+        </div>
+    </div>
+
+    <div class="compatibility-mode-toggle">
+        <label>
+            <input type="checkbox" id="compatibilityModeCheckbox"> 兼容模式
+        </label>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var checkbox = document.getElementById('compatibilityModeCheckbox');
+            
+            var isCompatibilityMode = localStorage.getItem('compatibilityMode') === 'true';
+            checkbox.checked = isCompatibilityMode;
+            updateCompatibilityMode(isCompatibilityMode);
+
+            checkbox.addEventListener('change', function() {
+                var enabled = this.checked;
+                localStorage.setItem('compatibilityMode', enabled);
+                updateCompatibilityMode(enabled);
+            });
+
+            function updateCompatibilityMode(enabled) {
+                if (enabled) {
+                    document.documentElement.setAttribute('data-compatibility-mode', 'true');
+                    var meta = document.createElement('meta');
+                    meta.httpEquiv = 'X-UA-Compatible';
+                    meta.content = 'IE=Edge';
+                    document.getElementsByTagName('head')[0].appendChild(meta);
+                } else {
+                    document.documentElement.removeAttribute('data-compatibility-mode');
+                    var metas = document.querySelectorAll('meta[http-equiv="X-UA-Compatible"]');
+                    metas.forEach(meta => meta.remove());
+                }
+            }
+            
+            updateCompatibilityMode(isCompatibilityMode);
+        });
+    </script>
+</body>
+</html>
